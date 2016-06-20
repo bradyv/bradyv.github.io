@@ -1,0 +1,138 @@
+---
+---
+@charset "utf-8";
+
+// Our variables
+$sans-stack: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Colors
+$twitter: #1D8EEE;
+$dribbble: #E33277;
+$instagram: #E63049;
+$medium: #17AE62;
+$near-black: #292D30;
+$it-green: #198126;
+$it-red: #C1162B;
+
+@import 'reset';
+
+html {
+  height: 100%;
+
+  body {
+    background: black;
+    font-family: $sans-stack;
+    color: white;
+    height: 100%;
+  }
+}
+
+section.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  main {
+    width: 100%;
+
+    #tricolore {
+      width: 80%;
+      height: 1px;
+      margin: 3em auto 2em auto;
+      display: flex;
+
+      section {
+        width: 33%;
+        height: 1px;
+
+        &:first-child {
+          background: $it-green;
+        }
+
+        &:nth-child(2) {
+          background: white;
+        }
+
+        &:last-child {
+          background: $it-red;
+        }
+      }
+    }
+
+    h1 {
+      font-weight: 200;
+      font-size: 3em;
+      background: url(/images/itme.jpg) no-repeat center bottom;
+      background-size: 400px;
+      display: block;
+      width: 100%;
+      height: 400px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    h2 {
+      font-weight: 200;
+      font-size: 1.25em;
+    }
+  }
+
+  nav {
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &.social {
+        padding: 0.75em 1.5em;
+        display: inline-block;
+        border-radius: 4px;
+        text-transform: uppercase;
+
+        i {
+          margin-right: 0.25em;
+        }
+
+        &.twitter {
+
+          &:hover {
+            background: $twitter;
+          }
+        }
+
+        &.dribbble {
+
+          &:hover {
+            background: $dribbble;
+          }
+        }
+
+        &.instagram {
+
+          &:hover {
+            background: $instagram;
+          }
+        }
+
+        &.medium {
+
+          &:hover {
+            background: $medium;
+          }
+        }
+
+        &.contact {
+
+          &:hover {
+            background: $near-black;
+          }
+        }
+      }
+    }
+  }
+}
