@@ -105,30 +105,20 @@ section.container {
           margin-right: 0.25em;
         }
 
-        @mixin background-hover($color) {
-          &:hover {
-            background: $color;
+        $colors: (
+          twitter: $twitter,
+          dribbble: $dribbble,
+          medium: $medium,
+          instagram: $instagram,
+          contact: $near-black
+        );
+
+        & {
+          @each $name, $color in $colors {
+            &.#{$name}:hover {
+              background: $color;
+            }
           }
-        }
-
-        &.twitter {
-          @include background-hover($twitter);
-        }
-
-        &.dribbble {
-          @include background-hover($dribbble);
-        }
-
-        &.instagram {
-          @include background-hover($instagram);
-        }
-
-        &.medium {
-          @include background-hover($medium);
-        }
-
-        &.contact {
-          @include background-hover($near-black);
         }
       }
     }
