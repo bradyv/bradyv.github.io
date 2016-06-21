@@ -45,7 +45,8 @@ section.container {
     width: 100%;
 
     #tricolore {
-      width: 80%;
+      width: 100%;
+      max-width: 900px;
       height: 1px;
       margin: 3em auto 2em auto;
       display: flex;
@@ -60,6 +61,7 @@ section.container {
 
         &:nth-child(2) {
           background: white;
+          width: 34%;
         }
 
         &:last-child {
