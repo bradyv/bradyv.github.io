@@ -15,6 +15,7 @@ url: "http://bradyvalentino.com" # the base hostname & protocol for your site
 twitter_username: bradyv
 github_username:  bradyv
 instagram_username: braaady
+dribbble_username: bradyv
 
 # Build settings
 markdown: kramdown

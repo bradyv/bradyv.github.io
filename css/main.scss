@@ -24,6 +24,11 @@ html {
     font-family: $sans-stack;
     color: white;
     height: 100%;
+
+    .fancy {
+      font-family: Baskerville, "Baskerville Old Face", Georgia;
+      font-style: italic;
+    }
   }
 }
 
@@ -98,39 +103,30 @@ section.container {
           margin-right: 0.25em;
         }
 
-        &.twitter {
-
+        @mixin background-hover($color) {
           &:hover {
-            background: $twitter;
+            background: $color;
           }
+        }
+
+        &.twitter {
+          @include background-hover($twitter);
         }
 
         &.dribbble {
-
-          &:hover {
-            background: $dribbble;
-          }
+          @include background-hover($dribbble);
         }
 
         &.instagram {
-
-          &:hover {
-            background: $instagram;
-          }
+          @include background-hover($instagram);
         }
 
         &.medium {
-
-          &:hover {
-            background: $medium;
-          }
+          @include background-hover($medium);
         }
 
         &.contact {
-
-          &:hover {
-            background: $near-black;
-          }
+          @include background-hover($near-black);
         }
       }
     }
