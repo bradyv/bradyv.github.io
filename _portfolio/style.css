@@ -1,0 +1,132 @@
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  height: 100%;
+  font-family: "Merriweather", Georgia, Times, serif;
+  color: #292D30;
+  text-align: center; }
+  body.home {
+    background: #EFF0F1; }
+    body.home a.return {
+      color: #292D30; }
+  body.single {
+    background: #292D30;
+    color: white; }
+
+a.return {
+  color: white;
+  text-decoration: none; }
+  a.return:hover {
+    text-decoration: underline; }
+
+h3.descrip {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.8em; }
+
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+p {
+  line-height: 175%; }
+
+section.container {
+  margin: 50px auto;
+  text-align: left;
+  max-width: 1000px;
+  position: relative; }
+  section.container .project {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    margin: 30px auto; }
+    section.container .project > * {
+      z-index: 1;
+      position: relative; }
+    section.container .project.single {
+      background: white;
+      color: #292D30;
+      text-align: left;
+      border-radius: 3px;
+      max-width: 1000px;
+      padding-bottom: 30px; }
+      section.container .project.single .meta {
+        border-bottom: 1px solid #EFF0F1;
+        margin-bottom: 30px;
+        padding: 30px; }
+        section.container .project.single .meta h1 {
+          float: left;
+          display: inline;
+          margin: 0; }
+        section.container .project.single .meta h3 {
+          float: right;
+          display: inline;
+          margin: 0; }
+      section.container .project.single p {
+        padding-left: 30px;
+        padding-right: 30px; }
+        section.container .project.single p:last-child {
+          margin-bottom: 0; }
+      section.container .project.single .attachment {
+        display: block;
+        max-width: 1000px;
+        background: #EFF0F1;
+        padding: 30px; }
+        section.container .project.single .attachment img {
+          max-width: 100%;
+          display: block;
+          margin: 0 auto; }
+        section.container .project.single .attachment p {
+          padding-left: 0;
+          padding-right: 0; }
+          section.container .project.single .attachment p:last-child {
+            margin-bottom: 0; }
+    section.container .project.list {
+      padding: 120px 30px;
+      border-radius: 3px;
+      background: white;
+      color: white; }
+      section.container .project.list .bg-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.2;
+        z-index: 0;
+        border-radius: 3px; }
+      section.container .project.list.perch {
+        background-image: linear-gradient(90deg, #B8B8D9 0%, #80A280 100%); }
+        section.container .project.list.perch .bg-image {
+          background: url(perch-hero.jpg) center center;
+          background-size: cover; }
+      section.container .project.list.wallflower {
+        background-image: linear-gradient(90deg, #E26931 0%, #1F7A98 100%); }
+        section.container .project.list.wallflower .bg-image {
+          background: url(wallflower-hero.jpg) center center;
+          background-size: cover; }
+      section.container .project.list.twitterrific {
+        background-image: linear-gradient(90deg, #68DFFF 0%, #007FE9 100%); }
+        section.container .project.list.twitterrific .bg-image {
+          background: url(twitterrific-hero.jpg) center center;
+          background-size: cover; }
+      section.container .project.list.reddit {
+        background-image: linear-gradient(-90deg, #F48E60 0%, #E16932 100%); }
+        section.container .project.list.reddit .bg-image {
+          background: url(reddit-hero.jpg) center center;
+          background-size: cover; }
+      section.container .project.list.fitbit {
+        background: #52BFBE; }
+        section.container .project.list.fitbit .bg-image {
+          background: url(fitbit-hero.jpg) center center;
+          background-size: cover; }
+
+/*# sourceMappingURL=style.css.map */
