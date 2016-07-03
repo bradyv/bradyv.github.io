@@ -19,3 +19,5 @@ dribbble_username: bradyv
 
 # Build settings
 markdown: kramdown
+
+include: ['_portfolio']
