@@ -103,6 +103,11 @@ section.container {
         opacity: 0.2;
         z-index: 0;
         border-radius: 3px; }
+      section.container .project.list.volta {
+        background-image: linear-gradient(26deg, #52BFBE 0%, #2F6AAE 95%); }
+        section.container .project.list.volta .bg-image {
+          background: url(volta-hero.jpg) center center;
+          background-size: cover; }
       section.container .project.list.perch {
         background-image: linear-gradient(90deg, #B8B8D9 0%, #80A280 100%); }
         section.container .project.list.perch .bg-image {
