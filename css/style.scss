@@ -1,0 +1,246 @@
+---
+---
+$font: study, serif;
+
+$pale: #F1F3F4;
+$blue-dark: #0B5174;
+$blue: #17A2E8;
+$slate-dark: #435056;
+$slate: #70858F;
+$orangered: #E84917;
+
+$steamclock: #992BB7;
+$treemendous: #61D350;
+$twitter: #1BA1F1;
+$dribbble: #EA4D89;
+$instagram: #EA4656;
+
+$breakMed: "only screen and (max-width: 768px)";
+$breakSm: "only screen and (max-width: 600px)";
+$breakTiny: "only screen and (max-width: 400px)";
+
+body {
+    font-family: $font;
+    background: $pale;
+    color: $slate-dark;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    padding: 4em;
+    max-width: 1200px;
+    margin: auto;
+    font-size: 18px;
+
+    @media #{$breakSm} {
+        padding: 2em;
+    }
+
+    @media #{$breakTiny} {
+        padding: 1em;
+    }
+
+    @media #{$breakMed} {
+        grid-template-columns: repeat(1, 1fr);
+        sidebar {
+            order: 0;
+            img.me {
+                width: 200px;
+            }
+        }
+
+        main {
+            order: 1;
+        }
+    }
+
+    &.post {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2em;
+        sidebar {
+            display: grid;
+            grid-template-columns: auto 250px;
+            grid-gap: 2em;
+            order: 1;
+
+            @media #{$breakMed} {
+                grid-gap: 0;
+                grid-template-columns: auto 200px;
+            }
+
+            @media #{$breakTiny} {
+                display: block;
+
+                img {
+                    display: none;
+                }
+            }
+
+            img {
+                order: 1;
+            }
+
+            main {
+                order: 0;
+
+                article {
+                    font-size: 1.25em;
+                    line-height: 125%;
+                    margin: 1em 0;
+                }
+            }
+        }
+
+        main {
+            time {
+                color: $slate;
+                font-size: 1.5em;
+            }
+
+            blockquote {
+                color: $slate;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+a {
+    color: $orangered;
+    text-decoration: none;
+
+    &.steamclock {
+        &:hover {
+            color: $steamclock !important;
+        }
+    }
+
+    &.treemendous {
+        &:hover {
+            color: $treemendous !important;
+        }
+    }
+
+    &.twitter {
+        &:hover {
+            color: $twitter !important;
+        }
+    }
+
+    &.dribbble {
+        &:hover {
+            color: $dribbble !important;
+        }
+    }
+
+    &.instagram {
+        &:hover {
+            color: $instagram !important;
+        }
+    }
+
+    &:hover {
+        color: $orangered !important;
+        text-decoration: underline;
+    }
+}
+
+.fancify {
+    font-style: italic;
+    text-transform: lowercase;
+
+    &.orangered {
+        color: $orangered;
+    }
+}
+
+img.me {
+    mix-blend-mode: darken;
+    width: 100%;
+    max-width: 512px;
+}
+
+main {
+    h1.name {
+        color: $blue-dark;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 2.6em;
+    }
+
+    h2.sting {
+        color: $blue;
+        font-weight: 200;
+        margin: 0;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+
+    p {
+        line-height: 175%;
+        font-size: 1.3em;
+    }
+
+    section.posts {
+        border-top: 2px solid rgba($slate,0.5);
+        padding-top: 2em;
+        margin-top: 1.5em;
+
+        article {
+            margin-bottom: 2em;
+            h1.title {
+                font-weight: 200;
+                margin: 0;
+                font-size: 1.3em;
+                text-transform: uppercase;
+
+                a {
+                    color: $blue;
+                }
+            }
+
+            time {
+                color: $slate;
+            }
+        }
+    }
+}
+
+sidebar {
+    background: $pale;
+}
+
+section.social {
+    a {
+        color: $slate;
+        margin-right: 1em;
+
+        i {
+            font-size: 0.8em;
+        }
+
+        span {
+            margin-left: 0.25em;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+hr {
+    height: 2px;
+    border: none !important;
+    background: rgba($slate,0.5);
+    border-radius: 2px;
+}
+
+a.return {
+    margin-top: -2.5em;
+    margin-bottom: 1em;
+    display: block;
+
+    @media #{$breakSm} {
+        margin: 1em 0 2em 0;
+    }
+}

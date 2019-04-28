@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+    <link href="/css/style.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/ieb1oow.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous">
+</head>
+<body class="home">
+    <main>
+        <header>
+            <h1 class="name">Brady Valentino</h1>
+            <h2 class="sting">{{ site.description }}</h2>
+        </header>
+
+        <article>
+            {{ page.content }}
+        </article>
+
+        <section class="posts">
+            {% for post in site.posts %}
+            <article>
+                <h1 class="title"><a href="{{ post.permalink }}">{{ post.title }}</a></h1>
+                <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            </article>
+            {% endfor %}
+        </section>
+
+        <section class="social">
+            <a href="//twitter.com/bradyv" class="twitter"><i class="fab fa-twitter"></i><span>@bradyv</span></a>
+            <a href="//instagram.com/braaady" class="instagram"><i class="fab fa-instagram"></i><span>braaady</span></a>
+            <a href="//dribbble.com/bradyv" class="dribbble"><i class="fab fa-dribbble"></i><span>bradyv</span></a>
+        </section>
+    </main>
+
+    <sidebar>
+        <img src="/me.jpg" alt="Brady Valentino" class="me">
+    </sidebar>
+</body>
+</html>
